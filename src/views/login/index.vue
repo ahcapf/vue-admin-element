@@ -5,7 +5,7 @@
         <h3 class="title">
           系统登录
         </h3>
-        <lang-select class="set-language" />
+        <!--<lang-select class="set-language" />-->
       </div>
 
       <el-form-item prop="username">

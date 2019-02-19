@@ -8,7 +8,7 @@
 // import { mapGetters } from 'vuex'
 
 export default {
-  name: 'Homepage',
+  name: 'MyApproval',
   data() {
     return {
     }
@@ -17,8 +17,4 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-  .dashboard-container{
-    background: white;
-    width: 100%;
-  }
 </style>

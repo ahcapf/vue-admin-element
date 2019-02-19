@@ -4,6 +4,7 @@
     <navbar/>
     <sidebar class="sidebar-container"/>
     <div class="main-container">
+      <breadcrumb class="breadcrumb-container"/>
       <app-main/>
     </div>
   </div>
@@ -12,10 +13,12 @@
 <script>
 import { Navbar, Sidebar, AppMain } from './components'
 import ResizeMixin from './mixin/ResizeHandler'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export default {
   name: 'Layout',
   components: {
+    Breadcrumb,
     Navbar,
     Sidebar,
     AppMain
@@ -65,5 +68,9 @@ export default {
     height: 100%;
     position: absolute;
     z-index: 999;
+  }
+  .breadcrumb-container{
+    background: white;
+    width: 100%;
   }
 </style>

@@ -23,7 +23,9 @@ export default {
 .app-main {
   /*84 = navbar + tags-view = 50 +34 */
   min-height: calc(100vh - 84px);
-  width: 100%;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 1%;
   position: relative;
   overflow: hidden;
 }

@@ -44,13 +44,91 @@ export const constantRouterMap = [
   {
     path: '',
     component: Layout,
-    redirect: 'dashboard',
+    redirect: 'homepage',
     children: [
       {
-        path: 'dashboard',
+        path: 'homepage',
         component: () => import('@/views/homepage/index'),
         name: '首页',
         meta: { title: '首页', icon: 'dashboard', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/projectManagement',
+    component: Layout,
+    redirect: '/projectManagement/index',
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/projectManagement/index'),
+        name: '项目管理',
+        meta: { title: '项目管理', icon: 'dashboard', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/myProject',
+    component: Layout,
+    redirect: '/myProject/index',
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/myProject/index'),
+        name: '我的项目',
+        meta: { title: '我的项目', icon: 'dashboard', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/myApproval',
+    component: Layout,
+    redirect: '/myApproval/index',
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/myApproval/index'),
+        name: '我的审批',
+        meta: { title: '我的审批', icon: 'dashboard', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/demandPreview',
+    component: Layout,
+    redirect: '/demandPreview/index',
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/demandPreview/index'),
+        name: '需求概览',
+        meta: { title: '需求概览', icon: 'dashboard', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/efficiencyStatistics',
+    component: Layout,
+    redirect: '/efficiencyStatistics/index',
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/efficiencyStatistics/index'),
+        name: '效能统计',
+        meta: { title: '效能统计', icon: 'dashboard', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/workflow',
+    component: Layout,
+    redirect: '/workflow/index',
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/workflow/index'),
+        name: '工作流图',
+        meta: { title: '工作流图', icon: 'dashboard', noCache: true }
       }
     ]
   }
