@@ -112,15 +112,15 @@ wh_content_item_tag {
 }
 .wh_content_item > .wh_isMark {
   margin: auto;
-  &:before{
+  &:after{
+    content:"";
     width: 5px;
     height: 5px;
     border-radius: 5px;
     background: #d95e29;
     position: absolute;
-    right: 48%;
-    left: 48%;
-    bottom: 20px;
+    left: 23px;
+    bottom: 0;
   }
 }
 .wh_content_item .wh_other_dayhide {

@@ -1,10 +1,10 @@
 <template>
   <div class="dashboard-container">
     <h1>敬请期待</h1>
-    <calendar
-      :mark-date="arr"
-      @choseDay="clickDay"
-      @changeMonth="changeDate"/>
+    <!--<calendar-->
+      <!--:mark-date="arr"-->
+      <!--@choseDay="clickDay"-->
+      <!--@changeMonth="changeDate"/>-->
   </div>
 </template>
 

@@ -1,18 +1,18 @@
 <template>
   <div class="navbar">
 
-    <svg-icon icon-class="qq" style="cursor:pointer" />
+    <svg-icon icon-class="woman" style="cursor:pointer" />
 
     <div class="right-menu">
-      <div class="right-menu-item">工作台</div>
+      <div class="right-menu-item hand">工作台</div>
       <div class="right-menu-item">|</div>
       <div class="right-menu-item">技术平台</div>
-      <i class="right-menu-item icon el-icon-info" />
+      <i class="right-menu-item icon el-icon-info hand" @click="dialogVisible = true" />
 
       <el-dropdown class="right-menu-item" trigger="click">
 
         <span class="el-dropdown-link" style="cursor: pointer">
-          <i class="el-icon-info" />
+          <svg-icon icon-class="man" />
           admin
           <i class="el-icon-caret-bottom"/>
         </span>
@@ -38,12 +38,21 @@
         </el-dropdown-menu>
       </el-dropdown>
     </div>
+    <help-dialog :dialog-visible="dialogVisible" @closeDialog="dialogVisible = false"/>
   </div>
 </template>
 
 <script>
-
+import HelpDialog from './Dialog/HelpDialog'
 export default {
+  components: {
+    HelpDialog
+  },
+  data() {
+    return {
+      dialogVisible: false
+    }
+  },
   methods: {
     toggleSideBar() {
       this.$store.dispatch('toggleSideBar')
@@ -86,5 +95,8 @@ export default {
       color: white;
     }
   }
+}
+.hand{
+  cursor: pointer;
 }
 </style>
