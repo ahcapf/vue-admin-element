@@ -59,7 +59,8 @@ export default {
     },
     logout() {
       this.$store.dispatch('LogOut').then(() => {
-        location.reload()// In order to re-instantiate the vue-router object to avoid bugs
+        // location.reload()// In order to re-instantiate the vue-router object to avoid bugs
+        console.log('logout')
         this.$router.push('/login')
       })
     }
@@ -86,8 +87,8 @@ export default {
     align-content: space-around;
     align-items: center;
     margin-right: 8px;
-    &:focus{
-     outline: none;
+    &:focus {
+      outline: none;
     }
     .right-menu-item {
       display: inline-block;
@@ -96,7 +97,7 @@ export default {
     }
   }
 }
-.hand{
+.hand {
   cursor: pointer;
 }
 </style>

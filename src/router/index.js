@@ -42,7 +42,7 @@ export const constantRouterMap = [
     hidden: true
   },
   {
-    path: '',
+    path: '/',
     component: Layout,
     redirect: 'homepage',
     children: [
@@ -51,84 +51,6 @@ export const constantRouterMap = [
         component: () => import('@/views/homepage/index'),
         name: '首页',
         meta: { title: '首页', icon: 'dashboard', noCache: true }
-      }
-    ]
-  },
-  {
-    path: '/projectManagement',
-    component: Layout,
-    redirect: '/projectManagement/index',
-    children: [
-      {
-        path: '',
-        component: () => import('@/views/projectManagement/index'),
-        name: '项目管理',
-        meta: { title: '项目管理', icon: 'dashboard', noCache: true }
-      }
-    ]
-  },
-  {
-    path: '/myProject',
-    component: Layout,
-    redirect: '/myProject/index',
-    children: [
-      {
-        path: '',
-        component: () => import('@/views/myProject/index'),
-        name: '我的项目',
-        meta: { title: '我的项目', icon: 'dashboard', noCache: true }
-      }
-    ]
-  },
-  {
-    path: '/myApproval',
-    component: Layout,
-    redirect: '/myApproval/index',
-    children: [
-      {
-        path: '',
-        component: () => import('@/views/myApproval/index'),
-        name: '我的审批',
-        meta: { title: '我的审批', icon: 'dashboard', noCache: true }
-      }
-    ]
-  },
-  {
-    path: '/demandPreview',
-    component: Layout,
-    redirect: '/demandPreview/index',
-    children: [
-      {
-        path: '',
-        component: () => import('@/views/demandPreview/index'),
-        name: '需求概览',
-        meta: { title: '需求概览', icon: 'dashboard', noCache: true }
-      }
-    ]
-  },
-  {
-    path: '/efficiencyStatistics',
-    component: Layout,
-    redirect: '/efficiencyStatistics/index',
-    children: [
-      {
-        path: '',
-        component: () => import('@/views/efficiencyStatistics/index'),
-        name: '效能统计',
-        meta: { title: '效能统计', icon: 'dashboard', noCache: true }
-      }
-    ]
-  },
-  {
-    path: '/workflow',
-    component: Layout,
-    redirect: '/workflow/index',
-    children: [
-      {
-        path: '',
-        component: () => import('@/views/workflow/index'),
-        name: '工作流图',
-        meta: { title: '工作流图', icon: 'dashboard', noCache: true }
       }
     ]
   }
@@ -140,29 +62,4 @@ export default new Router({
   routes: constantRouterMap
 })
 
-export const asyncRouterMap = [
-  // {
-  //   path: '/permission',
-  //   component: Layout,
-  //   redirect: '/permission/index',
-  //   alwaysShow: true, // will always show the root menu
-  //   meta: {
-  //     title: 'permission',
-  //     icon: 'lock',
-  //     roles: ['admin', 'editor'] // you can set roles in root nav
-  //   },
-  //   children: [
-  //     {
-  //       path: 'directive',
-  //       component: () => import('@/views/permission/directive'),
-  //       name: 'DirectivePermission',
-  //       meta: {
-  //         title: 'directivePermission'
-  //         // if do not set roles, means: this page does not require permission
-  //       }
-  //     }
-  //   ]
-  // },
 
-  { path: '*', redirect: '/404', hidden: true }
-]

@@ -1,0 +1,70 @@
+[
+  {
+    "name": "资源管理",
+    "path": "/resourceManage",
+    "component": "/resourceManage",
+    "icon": "",
+    "type": "menu",
+    "level": 1,
+    "children": [
+      {
+        "name": "列表",
+        "path": "/resourceManage/index",
+        "component": "/resourceManage/index",
+        "icon": "",
+        "type": "button",
+        "level": 2
+      },
+      {
+        "name": "新建",
+        "path": "/resourceManage/add",
+        "component": "/resourceManage/add/index",
+        "icon": "",
+        "type": "button",
+        "level": 2
+      },
+      {
+        "name": "修改",
+        "path": "/resourceManage/edit",
+        "component": "/resourceManage/add/index",
+        "icon": "",
+        "type": "button",
+        "level": 2
+      },
+      {
+        "name": "审批",
+        "path": "/resourceManage/approve",
+        "component": "/resourceManage/add/index",
+        "icon": "",
+        "type": "button",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "注册中心",
+    "path": "/registryCenter",
+    "component": "/registryCenter",
+    "icon": "",
+    "type": "menu",
+    "level": 1,
+    "children": [
+      {
+        "name": "节点列表",
+        "path": "/registryCenter/nodeList",
+        "component": "/registryCenter/nodeList/index",
+        "icon": "",
+        "type": "menu",
+        "level": 2
+      },
+      {
+        "name": "服务列表",
+        "path": "/registryCenter/serviceList",
+        "component": "/registryCenter/serviceList/index",
+        "icon": "",
+        "type": "menu",
+        "level": 2
+      }
+    ]
+  }
+]
