@@ -56,6 +56,71 @@ export const constantRouterMap = [
   }
 ]
 
+export const asyncRouterMap = [
+  {
+    path: '/resourceManage',
+    name: '资源管理',
+    component: Layout,
+    redirect: '/resourceManage/index',
+    meta: { title: '资源管理', icon: '' },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/resourceManage/index'),
+        hidden: true
+      },
+      {
+        path: 'add',
+        component: () => import('@/views/resourceManage/add'),
+        hidden: true
+      },
+      {
+        path: 'edit',
+        component: () => import('@/views/resourceManage/add'),
+        hidden: true
+      }
+    ]
+  },
+  {
+    path: '/registryCenter',
+    name: '注册中心',
+    component: Layout,
+    meta: { title: '注册中心', icon: '' },
+    children: [
+      {
+        path: 'nodeList',
+        component: () => import('@/views/registryCenter/nodeList/index'),
+        meta: { title: '节点列表', icon: '' }
+      },
+      {
+        path: 'serviceList',
+        component: () => import('@/views/registryCenter/serviceList/index'),
+        meta: { title: '服务列表', icon: '' }
+      }
+    ]
+  },
+  {
+    path: '/systemManage',
+    name: '系统管理',
+    component: Layout,
+    meta: { title: '系统管理', icon: '', roles: ['admin'] },
+    children: [
+      {
+        path: 'roleManage',
+        name: '角色管理',
+        component: () => import('@/views/systemManage/roleManage/index'),
+        meta: { title: '角色管理', icon: '', roles: ['admin'] }
+      },
+      {
+        path: 'menuManage',
+        name: '菜单管理',
+        component: () => import('@/views/systemManage/menuManage/index'),
+        meta: { title: '菜单管理', icon: '', roles: ['admin'] }
+      }
+    ]
+  }
+]
+
 export default new Router({
   // mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
